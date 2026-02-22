@@ -17,5 +17,4 @@ button.addEventListener('click', () => {
     } else {
         output.textContent = asciiToBinary(text);
     }
-
 });
