@@ -1,116 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    /*Alte Farben: background: linear-gradient(135deg, #489518, #d5ff74);*/
-    height: 100vh; 
-    text-align: center;
-    background: linear-gradient(135deg, #ffffff, #000000);
-    justify-content: center;
-    align-items: center;
-    display: flexbox;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden; 
+    min-height: 100dvh; /* besser für Mobile als 100vh */
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
     display: grid;
     place-items: center;
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
+    background: linear-gradient(135deg, #ffffff, #000000);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .glass {
-    width: 350px;
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    color: rgba(0, 0, 0, 0.189);
-    margin-left: 25%;
-    display: inline-block;
-    word-wrap: break-word;
-}
 
-.output-container {
-    min-height: 50px;
-    width: 255px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    color: rgba(0, 0, 0, 0.189);
-    border: 1px solid rgba(255,255,255,0.3);
-    display: inline-block;
-    word-wrap: break-word;
+
+    color: rgba(0, 0, 0, 0.6);
 }
-        
+.output-container {
+    width: 100%;
+    min-height: 60px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+
+    word-break: break-word;
+}
 .input-group {
     position: relative;
     width: 100%;
+    margin-top: 20px;
 }
 
 .input-group input {
-    width: 200px;
+    width: 100%;
+    height: 50px;
     padding: 0 20px;
+
     border-radius: 15px;
     border: 1px solid rgba(255,255,255,0.3);
+
     background: rgba(255,255,255,0.15);
-    color: rgba(72, 72, 72, 0.323);
-    font-size: 16px;
+    font-size: 16px; /* verhindert iOS Zoom */
     outline: none;
-    height: 50px;
 }
 
 .input-group label {
     position: absolute;
     left: 20px;
     top: 15px;
-    color: rgba(255, 255, 255, 0.642);
-    transition: 0.3s ease-in-out infinite;
+    transition: 0.3s ease;
     pointer-events: none;
 }
-
 .input-group input:focus + label,
-.input-group input:valid + label {
+.input-group input:not(:placeholder-shown) + label {
     top: -10px;
     left: 15px;
     font-size: 12px;
-    background: rgba(145, 145, 145, 0.295);
-    padding: 2px 8px ;
+    background: rgba(145,145,145,0.3);
+    padding: 2px 8px;
     border-radius: 8px;
 }
-
-h1,p,.convertBtn, .input-group label {
-    user-select: none;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* Edge */
-}
-
 .convertBtn {
-    width: 100px;
+    width: 100%;
     height: 50px;
+    margin-top: 20px;
+
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    color: rgba(0, 0, 0, 0.327);
-    border: 1px solid rgba(255,255,255,0.3);
+
     font-size: 16px;
     cursor: pointer;
-
 }
