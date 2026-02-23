@@ -10,7 +10,7 @@ body {
     display: grid;
     place-items: center;
 
-    background: linear-gradient(135deg, #00eb00, #0000eb);
+    background: radial-gradient(circle, #ffffff, #000000);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -97,6 +97,7 @@ body {
     appearance: none;
     -webkit-appearance: none;
 }
+
 
 
 
