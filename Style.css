@@ -3,7 +3,7 @@
 }
 
 body {
-    min-height: 100dvh; /* besser für Mobile als 100vh */
+    min-height: 100dvh; 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 
@@ -97,5 +97,6 @@ body {
     appearance: none;
     -webkit-appearance: none;
 }
+
 
 
